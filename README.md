@@ -14,6 +14,10 @@ Add this line to your application's Gemfile:
 
 ```ruby
 gem 'array_while'
+
+or
+
+gem 'array_while', '0.1.1.beta', git: "https://github.com/rubywarlock/array_while"
 ```
 
 And then execute:
@@ -23,6 +27,8 @@ And then execute:
 Or install it yourself as:
 
     $ gem install array_while
+    or
+    $ gem install rubywarlock-array_while, -s "https://github.com"
 
 ## Usage
 
