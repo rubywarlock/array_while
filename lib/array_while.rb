@@ -1,26 +1,30 @@
 require "array_while/version"
 
-module ArrayWhile
-  class Error < StandardError; end
+class Object
+  class Array
+    def while
+      return unless block_given?
+      index, array = 0, self.dup
 
-  class Object
-    class Array
-      def while
-        index = 0
-        array = Array.new(self)
+      while array.size > 0
+        yield(array.shift, index)
 
-        while array.size > 0
-
-          yield(array.shift, index)
-
-          index += 1
-        end
-
+        index += 1
       end
     end
+  end
 
-    class Hash
-      def while
+  class Hash
+    def while
+      return unless block_given?
+      index, hash = 0, self.dup
+
+      while hash.size > 0
+        key_value = hash.shift
+
+        yield(*key_value, index)
+
+        index += 1
       end
     end
   end
