@@ -13,11 +13,11 @@ is taken from the book "Ruby Performance Optimization" and was invented by Alexa
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'array_while'
+gem 'fast_while'
 
 or
 
-gem 'array_while', '0.1.1.beta', git: "https://github.com/rubywarlock/array_while"
+gem 'fast_while', '0.1.1.beta', git: "https://github.com/rubywarlock/fast_while"
 ```
 
 And then execute:
@@ -26,9 +26,9 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install array_while
+    $ gem install fast_while
     or
-    $ gem install rubywarlock-array_while, -s "https://github.com"
+    $ gem install rubywarlock-fast_while, -s "https://github.com"
 
 ## Usage
 
@@ -42,7 +42,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/rubywarlock/array_while.
+Bug reports and pull requests are welcome on GitHub at https://github.com/rubywarlock/fast_while.
 
 
 ## License
