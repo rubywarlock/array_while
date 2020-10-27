@@ -4,6 +4,66 @@
 This gem extends the Array and Hash classes by adding a while method for arrays.
 The method repeats the loop while most of it is used while remaining inside the given method, which allows for cleaner code using the capabilities of a regular while loop.
 
+### perfomance
+The method also uses a way to increase the performance of the while loop,
+is taken from the book "Ruby Performance Optimization" and was invented by Alexander Goldstein.	is taken from the book "Ruby Performance Optimization" and was invented by Alexander Goldstein.
+
+```ruby
+times = 100_000
+  array = (1..1_000).to_a
+
+  Benchmark.bm(30) do |b|
+    b.report "each" do
+      times.times do |i|
+        t = 0
+        array.each do |element|
+          t = element
+        end
+      end
+    end
+
+    b.report "Array.while" do
+      a = array.dup
+      times.times do |i|
+        t = 0
+        a.while do |el|
+          t = el
+        end
+      end
+    end
+
+    b.report "while i < limit" do
+      times.times do |i|
+        limit = array.size
+        t = 0
+        i = 0
+        while i < limit
+          t = array[i]
+          i += 1
+        end
+      end
+    end
+
+    b.report "map" do
+      times.times do |i|
+        t = 0
+        t = array.map do |el|
+          el
+        end
+      end
+    end
+  end
+end
+```
+results:
+```
+                                     user     system      total        real
+each                             4.662862   0.012201   4.675063 (  4.685053)
+Array.while                      0.025352   0.000005   0.025357 (  0.025357)
+while i < limit                  2.841647   0.001288   2.842935 (  2.844023)
+map                              5.220490   0.076842   5.297332 (  5.301697)
+```
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -27,14 +87,20 @@ Or install it yourself as:
     $ gem install rubywarlock-fast_while, -s "https://github.com"
 
 ## Usage
-```
-["one", "two"].while do |el, index|
+```ruby
+# next two line needed, becouse
+# this is necessary because the shift method is used on the array object, which extracts an element from the array by removing it.
+
+original_array = ["one", "two"]
+while_array = original_array.dup
+
+while_array.while do |el, index|
   puts "#{el}, #{index}"
 end
 ```
 
 #### for a hash, it is currently required to specify two parameters, if you need not only a key but also a value
-```
+```ruby
 {one: "VALUE"}.while do |key, value|
   puts "#{key}, #{value}"
 end
