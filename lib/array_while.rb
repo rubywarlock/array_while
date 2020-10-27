@@ -1,31 +1,34 @@
 require "array_while/version"
 
 class Object
+
   class Array
     def while
-      return unless block_given?
-      index, array = 0, self.dup
+      i, array = 0, dup
 
-      while array.size > 0
-        yield(array.shift, index)
+      while size > 0
+        yield(shift, i)
 
-        index += 1
+        i += 1
       end
+
+      return array
     end
+
   end
 
   class Hash
     def while
-      return unless block_given?
-      index, hash = 0, self.dup
+      index, hash = 0, dup
 
-      while hash.size > 0
-        key_value = hash.shift
+      while size > 0
 
-        yield(*key_value, index)
+        yield(*(shift), index)
 
         index += 1
       end
+
+      return hash
     end
   end
 end
