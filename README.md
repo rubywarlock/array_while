@@ -87,20 +87,19 @@ Or install it yourself as:
 
 ## Usage
 ```ruby
-# the next two lines are needed because:
-# this is necessary because the shift method is used on the array object, which extracts an element from the array by removing it.
+array = ["one", "two"]
 
-original_array = ["one", "two"]
-while_array = original_array.dup
-
-while_array.while do |el, index|
+array = array.while do |el, index|
   puts "#{el}, #{index}"
 end
+
+# method returns a array copy since the original array is destroyed due to the use of the Shift method
 ```
 
 #### for a hash, it is currently required to specify two parameters, if you need not only a key but also a value
 ```ruby
-{one: "VALUE"}.while do |key, value|
+hash = { first: "VALUE" }
+hash = hash.while do |key, value|
   puts "#{key}, #{value}"
 end
 ```
