@@ -1,4 +1,4 @@
-# ArrayWhile
+# FastWhile
 
 ### clean code
 This gem extends the Array and Hash classes by adding a while method for arrays.
