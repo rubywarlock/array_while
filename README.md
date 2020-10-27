@@ -87,7 +87,7 @@ Or install it yourself as:
 
 ## Usage
 ```ruby
-# next two line needed, becouse
+# the next two lines are needed because:
 # this is necessary because the shift method is used on the array object, which extracts an element from the array by removing it.
 
 original_array = ["one", "two"]
