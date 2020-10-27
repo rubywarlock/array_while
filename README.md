@@ -4,10 +4,6 @@
 This gem extends the Array and Hash classes by adding a while method for arrays.
 The method repeats the loop while most of it is used while remaining inside the given method, which allows for cleaner code using the capabilities of a regular while loop.
 
-### perfomance
-The method also uses a way to increase the performance of the while loop,
-is taken from the book "Ruby Performance Optimization" and was invented by Alexander Goldstein.
-
 ## Installation
 
 Add this line to your application's Gemfile:
