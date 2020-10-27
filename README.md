@@ -1,7 +1,7 @@
 # ArrayWhile
 
 ### clean code
-This gem extends the Array class by adding a while method for arrays.
+This gem extends the Array and Hash classes by adding a while method for arrays.
 The method repeats the loop while most of it is used while remaining inside the given method, which allows for cleaner code using the capabilities of a regular while loop.
 
 ### perfomance
@@ -31,9 +31,18 @@ Or install it yourself as:
     $ gem install rubywarlock-fast_while, -s "https://github.com"
 
 ## Usage
+```
+["one", "two"].while do |el, index|
+  puts "#{el}, #{index}"
+end
+```
 
-TODO: Write usage instructions here
-
+#### for a hash, it is currently required to specify two parameters, if you need not only a key but also a value
+```
+{one: "VALUE"}.while do |key, value|
+  puts "#{key}, #{value}"
+end
+```
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
