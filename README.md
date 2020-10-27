@@ -10,46 +10,45 @@ is taken from the book "Ruby Performance Optimization" and was invented by Alexa
 
 ```ruby
 times = 100_000
-  array = (1..1_000).to_a
+array = (1..1_000).to_a
 
-  Benchmark.bm(30) do |b|
-    b.report "each" do
-      times.times do |i|
-        t = 0
-        array.each do |element|
-          t = element
-        end
+Benchmark.bm(30) do |b|
+  b.report "each" do
+    times.times do |i|
+      t = 0
+      array.each do |element|
+        t = element
       end
     end
+  end
 
-    b.report "Array.while" do
-      a = array.dup
-      times.times do |i|
-        t = 0
-        a.while do |el|
-          t = el
-        end
+  b.report "Array.while" do
+    a = array.dup
+    times.times do |i|
+      t = 0
+      a.while do |el|
+        t = el
       end
     end
+  end
 
-    b.report "while i < limit" do
-      times.times do |i|
-        limit = array.size
-        t = 0
-        i = 0
-        while i < limit
-          t = array[i]
-          i += 1
-        end
+  b.report "while i < limit" do
+    times.times do |i|
+      limit = array.size
+      t = 0
+      i = 0
+      while i < limit
+        t = array[i]
+        i += 1
       end
     end
+  end
 
-    b.report "map" do
-      times.times do |i|
-        t = 0
-        t = array.map do |el|
-          el
-        end
+  b.report "map" do
+    times.times do |i|
+      t = 0
+      t = array.map do |el|
+        el
       end
     end
   end
