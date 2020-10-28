@@ -1,22 +1,22 @@
 require_relative 'lib/array_while/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "array_while"
+  spec.name          = "fast_while"
   spec.version       = ArrayWhile::VERSION
   spec.authors       = ["Vitaly Simakov"]
   spec.email         = ["faetonvs@gmail.com"]
 
   spec.summary       = %q{Clean code and faster loop by while}
   spec.description   = %q{Extend array class by while method}
-  spec.homepage      = "https://github.com/rubywarlock/array_while"
+  spec.homepage      = "https://github.com/rubywarlock/fast_while"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 
-  spec.metadata["allowed_push_host"] = "https://github.com/rubywarlock/array_while"
+  spec.metadata["allowed_push_host"] = "https://github.com/rubywarlock/fast_while"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://github.com/rubywarlock/array_while"
-  spec.metadata["changelog_uri"] = "https://github.com/rubywarlock/array_while/CHANGELOG.md"
+  spec.metadata["source_code_uri"] = "https://github.com/rubywarlock/fast_while"
+  spec.metadata["changelog_uri"] = "https://github.com/rubywarlock/fast_while/CHANGELOG.md"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
