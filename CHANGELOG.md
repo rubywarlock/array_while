@@ -1,3 +1,8 @@
+## 0.1.3.beta
+
+* Change modules name
+
+
 ## 0.1.2.beta
 
 * Change version and while methods - now array removing by shift method
