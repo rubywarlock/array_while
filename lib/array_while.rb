@@ -14,18 +14,16 @@ class Object
 
       return array
     end
-
   end
 
   class Hash
     def while
-      index, hash = 0, dup
+      i, hash = 0, dup
 
       while size > 0
+        yield(*(shift), i)
 
-        yield(*(shift), index)
-
-        index += 1
+        i += 1
       end
 
       return hash
