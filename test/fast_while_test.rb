@@ -1,8 +1,8 @@
 require "test_helper"
 
-class ArrayWhileTest < Minitest::Test
+class FastWhileTest < Minitest::Test
   def test_that_it_has_a_version_number
-    refute_nil ::ArrayWhile::VERSION
+    refute_nil ::FastWhile::VERSION
   end
 
   def test_it_does_something_useful
