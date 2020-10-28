@@ -1,3 +1,3 @@
-module ArrayWhile
-  VERSION = "0.1.2.beta"
+module FastWhile
+  VERSION = "0.1.3.beta"
 end
