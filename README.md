@@ -1,3 +1,5 @@
+Currently it not worked, because fixes are needed
+
 # FastWhile
 
 ### clean code
