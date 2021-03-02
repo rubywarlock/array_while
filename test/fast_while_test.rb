@@ -5,7 +5,8 @@ class FastWhileTest < Minitest::Test
     refute_nil ::FastWhile::VERSION
   end
 
-  def test_it_does_something_useful
-    assert false
+  def test_method_exists
+    arr = []
+    assert_equal true, arr.respond_to?("while")
   end
 end

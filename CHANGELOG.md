@@ -1,3 +1,9 @@
+## 0.1.4.beta
+
+* Fix folder name from array_while to fast_while
+* Fix few object names array_while to fast_while
+* Added test for cechking while method exists in array instance
+
 ## 0.1.3.beta
 
 * Change modules name

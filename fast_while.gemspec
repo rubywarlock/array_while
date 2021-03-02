@@ -1,8 +1,8 @@
-require_relative 'lib/array_while/version'
+require_relative 'lib/fast_while/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "fast_while"
-  spec.version       = ArrayWhile::VERSION
+  spec.version       = FastWhile::VERSION
   spec.authors       = ["Vitaly Simakov"]
   spec.email         = ["faetonvs@gmail.com"]
 

@@ -1,4 +1,4 @@
-require "array_while/version"
+require "fast_while/version"
 
 class Object
 
