@@ -74,7 +74,7 @@ gem 'fast_while'
 
 or
 
-gem 'fast_while', '0.1.1.beta', git: "https://github.com/rubywarlock/fast_while"
+gem 'fast_while', '0.1.4.beta', git: "https://github.com/rubywarlock/fast_while"
 ```
 
 And then execute:
