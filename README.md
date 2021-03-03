@@ -1,4 +1,4 @@
-Currently it not worked, because fixes are needed
+Currently this gem is under testing and development, therefore use permits only in trials and tests.
 
 # FastWhile
 
