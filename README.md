@@ -70,11 +70,7 @@ map                              4.856023   0.068651   4.924674 (  4.928941)
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'fast_while'
-
-or
-
-gem 'fast_while', '0.1.4.beta', git: "https://github.com/rubywarlock/fast_while"
+gem 'fast_while', git: "https://github.com/rubywarlock/fast_while"
 ```
 
 And then execute:
@@ -83,8 +79,6 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install fast_while
-    or
     $ gem install rubywarlock-fast_while, -s "https://github.com"
 
 ## Usage
